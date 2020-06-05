@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 2</title>
+  <script type = "text/javascript" src = "jquery-3.4.1_1.js"> </script>
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+  <script>$ (document).ready(function() { 
+
+ $("#first_button").bind("click", function(){
+ alert("Один клік");
+  });
+
+$("#second_button").bind("dblclick", function(){
+ alert("двійний клік");
+  });
+
+})</script>
+</head>
+<body>
+<form id=main_form>
+  <input type="button" id="first_button" value="Натисніть 1 раз"><br>
+  <input type="button" id="second_button" value="Натисніть 2 рази">
+</form>
+</body>
+</html>

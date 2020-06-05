@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		var contenents = new Array(6);
+
+		contenents[0] = "Австралія";
+		contenents[1] = "Азія";
+		contenents[2] = "Америка";
+		contenents[3] = "Антарктида";
+		contenents[4] = "Африка";
+		contenents[5] = "Європа";
+
+		var density = new Array(6)
+		density[0] = 3;
+		density[1] = 87;
+		density[2] = 24;
+		density[3] = 0;
+		density[4] = 36;
+		density[5] = 97;
+
+		var area = new Array(6)
+		area[0] = 7688287;
+		area[1] = 43475000;
+		area[2] = 42549000;
+		area[3] = 14000000;
+		area[4] = 30300000;
+		area[5] = 10523000;
+
+		var i;
+		function func1() {
+			i = 0;
+			var a = select1.value;
+			for(var j of contenents)
+			{
+				if (a == j) break;
+				i++;
+				j++;
+			}
+			density_val.value = density[i];
+			area_val.value = area[i];
+			
+		}
+		function func2(){
+	
+			population_val.value = density[i] * area[i];
+		}
+
+		
+	</script>
+</head>
+<body>
+	<form>
+		<select id="select1">
+  			<option>Австралія</option>
+  			<option>Азія</option>
+			<option>Америка</option>
+			<option>Антарктида</option>
+			<option>Африка</option>
+			<option>Європа</option>
+		</select>
+		
+		<br>
+		<br>
+		Густина населення
+		<input type="text" id="density_val" >
+		
+		
+
+		Площа
+		<input type="text" id="area_val" >
+
+		<br>
+		<br>
+		<input type="button" value="Обчислити" onclick="func1()">
+
+		<br>
+		<br>
+
+		Населення
+		<input type="text" id="population_val" >
+		<br>
+		<input type="button" value="Обчислити" onclick="func2()" >
+
+	</form>
+
+</body>
+</html>

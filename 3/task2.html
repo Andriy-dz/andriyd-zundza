@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var expression = '';
+		function calc(ob){
+			expression+=ob;
+			output.value = expression;
+		}
+		function res(){
+			expression =  eval(expression);
+			output.value = expression;
+		}
+		function erase(){
+			expression = expression.substring(0, expression.length-1);
+			output.value = expression;
+
+		}
+	</script>
+</head>
+<body>
+	<form>
+		
+		<input type="text" id="output" name="" placeholder="output" style="width: 21.1%; height: 50px">
+		<br>
+		
+		<br>
+		<input type="button" name="1" value="1"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="2" value="2"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="3" value="3"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="+" value="+"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<br>
+		<input type="button" name="4" value="4"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="5" value="5"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="6" value="6"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="-" value="-"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<br>
+		<input type="button" name="7" value="7"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="8" value="8"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="9" value="9"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="*" value="*"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<br>
+		<input type="button" name="0" value="0"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		<input type="button" name="=" value="="  style="margin: 0.2%; width: 5%" onclick="res()">
+		<input type="button" name="<-" value="<-" style="margin: 0.2%; width: 5%" onclick="erase()">
+		<input type="button" name="/" value="/"  style="margin: 0.2%; width: 5%" onclick="calc(this.value)">
+		
+		<br>
+	</form>
+</body>
+</html>

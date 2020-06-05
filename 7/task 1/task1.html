@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 1</title>
+  <script type = "text/javascript" src = "jquery-3.4.1_1.js"> </script>
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+  <style>
+  .style_for_text{
+   background:  brown;
+   border-style: inset;
+ }
+  </style>
+   <script>$ (document).ready(function() { 
+ $("div").bind("click", function(){
+ $(this).addClass("style_for_text");
+  });
+
+$("div").bind("dblclick", function(){
+  $(this).removeClass("style_for_text");
+  });
+
+})</script>
+</head>
+<body>
+<br><br> 
+<div><h3>При одинарному кліку на текст з'являється рамка та заливка,при подвійному, повертаються початкові значення</h3>
+</div>
+
+</body>
+</html>

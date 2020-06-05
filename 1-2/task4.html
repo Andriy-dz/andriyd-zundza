@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Complicated math</title>
+    <script type="text/javascript">
+      function op() {
+        var x,y,f;
+        x = parseInt(workForm.xVar.value);
+        y = parseInt(workForm.yVar.value);
+
+          if ( x > 0 && y < 0)
+          {
+            f = ((- 3 * x) + y^3);
+          } else if ((x * y) - x < 3)
+          {
+            f = ( x + y - x^2 * y );
+          } else
+          {
+            f = ( x^2 + y^2);
+          } 
+        workForm.res.value = f;
+      }
+    </script>
+  </head>
+  <body>
+    <form id="workForm">
+      Input X variable
+      <input id="xVar" type="text" name="Enter X">
+      <br>
+      Input Y variable
+      <input id="yVar" type="text" name="Enter Y">
+      <br>
+      <input type="button" value="GET RESULT" onClick="op();">
+      <input id="res" type="text" name="Result">
+      <br>
+      <br>
+      <a href="../">Go Home</a>
+    </form>
+  </body>
+</html>

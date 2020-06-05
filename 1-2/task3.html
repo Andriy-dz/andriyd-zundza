@@ -1,0 +1,23 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>#3</title>
+    <script type="text/javascript">
+      function redirect(input) {
+        output.value=input;
+      }
+	  function redirect1(input) {
+        output.value=input;
+      }
+    </script>
+  </head>
+  <body>
+    <form id="workForm">
+      <input type="text" size="100" value="hello" onChange="redirect('Something changed me(');">
+      <input id="output" type="text" size="100" onMouseOut="redirect1('Cursor is out');">
+    </form>
+    <a onMouseOut="Cursor is out"</a>
+  </body>
+</html>
+	

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 4</title>
+  <script type = "text/javascript" src = "jquery-3.4.1_1.js"> </script>
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+   <script>$ (document).ready(function() { 
+
+ $("form").submit(function() {
+      if ($("#input").val() == "correct") {
+        return true;
+      }
+      $("span").text("Неправильно!");
+      return false;
+    }); 
+
+})</script>
+</head>
+<body>
+	<p> Введіть в текстове поле слово 'correct'.</p>
+  <form action="javascript:alert('Успішно!');"> 	
+    <div>
+      <input type="text" id="input">
+      <input type="submit">
+    </div>
+  </form>
+  <span></span>
+</html>

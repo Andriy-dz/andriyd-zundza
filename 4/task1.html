@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>task1</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<table cellspacing="0px" cellpadding="3pt" style="">
+<tbody><tr>
+  <td> Довжина </td>
+  <td><input type="text" id="length" onkeyup="f()" value=0></td>
+</tr>
+<tr>
+<td> Ширина </td>
+  <td><input type="text" id="width" onkeyup="f()" value=0></td>
+</tr>
+<tr>
+  <td> Периметр </td>
+  <td id="perimetr_"></td>
+</tr>
+<tr>
+  <td> Площа </td>
+  <td id="square_"></td>
+</tr>
+</tr>
+<tr>
+  <td> Довжина діагоналі </td>
+  <td id="diagonal_length_"></td>
+</tr>
+</tbody></table>
+
+<script>
+function f(){
+  var length=document.getElementById('length');
+  var width=document.getElementById('width');
+  var perimetr = 2 * (parseInt(length.value) + parseInt(width.value) );
+  var square = parseInt(length.value) * parseInt(width.value);
+  var diagonal_length=Math.sqrt(parseInt(length.value)*parseInt(length.value)+ parseInt(width.value)* parseInt(width.value));
+  $("#perimetr_").text(perimetr);
+  $("#square_").text(square);
+  $("#diagonal_length_").text(diagonal_length);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Завдання 1</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+var a=['1.jpg','2.jpg','3.jpg'];
+var k=0;
+function forward(){
+var temp=document.getElementById('im');
+k++;
+if(k<a.length){
+	temp.src=a[k];
+    }
+else{
+		k=0;
+		temp.src=a[k];
+	}
+}
+
+function backwards(){
+var temp=document.getElementById('im');
+	k--;
+if(k>=0){
+	temp.src=a[k];
+	}
+else{
+	k=2;
+	temp.src=a[k];
+	}
+}	
+</script>
+</head>
+<body>
+<form id="view">
+<input type="button" onClick="backwards();" value="Назад" style="width:100px;height:100px; font-size:100%">
+<input type="button" onClick="forward();" value="Вперед" style="width:100px;height:100px; font-size:100%"><br><br> 
+<div id="image"><img src="1.jpg" id="im"></div>
+</form>
+</body>
+</html>

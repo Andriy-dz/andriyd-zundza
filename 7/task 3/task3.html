@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 3</title>
+  <script type = "text/javascript" src = "jquery-3.4.1_1.js"> </script>
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+  <script>$ (document).ready(function() { 
+ $("#show").bind("click", function(){
+  $("#img").show();
+  });
+
+ $("#img").bind("click", function(){
+  $("#im").hide();
+  });
+
+$( "#img" ).mouseout(function() {
+   $("dialog").hide();
+  })
+
+$( "#img" ).mouseover(function() {
+   $("dialog").show();
+  })
+
+})
+</script>
+</head>
+<body>
+  <div id="show">Показати зображення</div>
+  <div><img src="image.jpg" id="img" title="Це вспливаюче вікно!" style="display: none;"> </div>
+  <dialog>Википе́дия (англ. Wikipedia, произносится [ˌwɪkɨˈpiːdiə] или [ˌwɪkiˈpiːdiə]) — общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом[комм. 2], реализованная на принципах вики. Расположена по адресу wikipedia.org.
+
+Владелец сайта — американская некоммерческая организация «Фонд Викимедиа», имеющая 37 региональных представительств. Название энциклопедии образовано от английских слов wiki («вики»; в свою очередь заимствовано из гавайского языка, в котором оно имеет значение «быстро») и encyclopedia («энциклопедия»).</dialog>
+</body>
+</html>

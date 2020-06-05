@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>task2</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+var a_ukr=['а','б','в','г','д','е','ж','з','і','ї','й','к','л','м','н','о','п','р','с','т','у','ф','ч','ц','ч','ш','щ','ь','ю','я',' ','?'];
+var code="";
+var k=0;
+$(document).ready(function() { 
+for(var i=0;i<a_ukr.length; i++){
+	k++;
+ if (k%31==0){code+="<input type=\"button\" id=\"" + a_ukr[i] + "\" onClick=\"write_text(value);\" style=\"width:50px;height:50px; font-size:200%\" value=\"" + a_ukr[i] + "\"> ";
+    }
+    else{
+    	code+="<input type=\"button\" id=\"" + a_ukr[i] + "\" onClick=\"write_text(value);\" style=\"width:50px;height:50px; font-size:200%\" value=\"" + a_ukr[i] + "\">";
+    }
+	
+
+}
+document.getElementById('main_div').innerHTML=code;
+}); 
+function write_text(value111){
+var letter=document.getElementById('input_result');
+letter.value+=value111;
+}
+function del(){
+var letter=document.getElementById('input_result');
+letter.value="";
+}
+</script>
+</head>
+<body>
+<form id="main_form">
+<div id="main_div"></div>
+<p><textarea cols="206" rows="40" id="input_result"></textarea><br>
+<input type="button" id="delete" onClick="del();" value="Очистити поле"><br>
+</form>
+</body>
+</html>

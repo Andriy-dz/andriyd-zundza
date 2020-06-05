@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Завдання 2</title>
+  <script type = "text/javascript" src = "jquery-3.4.1_1.js"> </script>
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+  <style>
+  .style_for_text{font-style:oblique;background-color:orange;}
+
+  </style>
+  <script>$ (document).ready(function() { 
+  $('div').hover(
+  	function() {
+    $("div").addClass("style_for_text");
+    },
+
+    function() {
+    $("div").removeClass("style_for_text");
+    },
+    );
+
+})</script>
+</head>
+<body>
+<br><br> 
+<div><h3>Стиль тексту змінюється при наведенні курсора миші</h3>
+</div>
+
+</body>
+</html>

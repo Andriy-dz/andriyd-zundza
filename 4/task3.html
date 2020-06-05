@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>task3</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  var a_ukr=['а','б','в','г','д','е','ж','з','і','ї','й','к','л','м','н','о','п','р','с','т','у','ф','ч','ц','ч','ш','щ','ь','ю','я',' ','?'];
+var a_eng=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','-','!','?','.',];
+var code="";
+var k=0;
+$(document).ready(function() { 
+for(var i=0;i<a_ukr.length; i++){
+	k++;
+	if (k%31==0){code+="<input type=\"button\" id=\"" + a_ukr[i] + "\" onClick=\"write_text(value);\" style=\"width:50px;height:50px; font-size:200%\" value=\"" + a_ukr[i] + "\"> ";
+    }
+    else{
+    	code+="<input type=\"button\" id=\"" + a_ukr[i] + "\" onClick=\"write_text(value);\" style=\"width:50px;height:50px; font-size:200%\" value=\"" + a_ukr[i] + "\">";
+    }
+
+}
+document.getElementById('main_div').innerHTML=code;
+}); 
+function write_text(value111){
+var letter=document.getElementById('input_result');
+letter.value+=value111;
+}
+function del(){
+var letter=document.getElementById('input_result');
+letter.value="";
+}
+var amount=0;
+function leyout(){
+if(amount==0){
+for(var i=0;i<a_ukr.length;i++){
+var letter=document.getElementById(a_ukr[i]);
+letter.value=a_eng[i];
+}
+amount=1;
+}
+else{
+for(var i=0;i<a_ukr.length;i++){
+var letter=document.getElementById(a_ukr[i]);
+letter.value=a_ukr[i];
+}
+amount=0;
+}
+}
+</script>
+</head>
+<body>
+<form id="main_form">
+<div id="main_div"></div>
+<!--<input type="text" style="width:800px;height:800px;" id="input_result" value=""><br>-->
+<p><textarea cols="206" rows="40" id="input_result"></textarea><br>
+<input type="button" onClick="del();" value="Очистити поле"><br>
+<input type="button" onClick="leyout();" value="Alt+Shift"><br>
+</form>
+</body>
+</html>
